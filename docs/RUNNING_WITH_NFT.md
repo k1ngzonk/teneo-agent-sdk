@@ -1,5 +1,6 @@
 # Running Your Agent with NFT Token ID
 
+Test Test\
 Now that the registration message has been updated to use NFT token IDs, here's how to run your agent:
 
 ## Environment Variables
@@ -91,16 +92,17 @@ PRIVATE_KEY=your_key NFT_TOKEN_ID=123 go run main.go
 1. Agent connects to WebSocket server
 2. Completes authentication challenge using private key
 3. Stores the challenge and signature from authentication
-4. Sends registration message with new format:
-   ```json
-   {
-     "userType": "agent",
-     "nft_token_id": "123", 
-     "wallet_address": "0x1234567890123456789012345678901234567890",
-     "challenge": "actual-challenge-from-auth",
-     "challenge_response": "signature-from-auth"
-   }
-   ```
+4.  Sends registration message with new format:
+
+    ```json
+    {
+      "userType": "agent",
+      "nft_token_id": "123", 
+      "wallet_address": "0x1234567890123456789012345678901234567890",
+      "challenge": "actual-challenge-from-auth",
+      "challenge_response": "signature-from-auth"
+    }
+    ```
 5. Server extracts agent capabilities, name, and version from NFT metadata
 6. Agent is registered and ready to receive tasks
 
@@ -108,8 +110,8 @@ PRIVATE_KEY=your_key NFT_TOKEN_ID=123 go run main.go
 
 ## Troubleshooting
 
-- **Missing NFT_TOKEN_ID**: Ensure you set the `NFT_TOKEN_ID` environment variable
-- **Invalid Token ID**: Verify your NFT token ID exists and is valid
-- **Authentication Failed**: Check that your `PRIVATE_KEY` is correct and matches the NFT owner
+* **Missing NFT\_TOKEN\_ID**: Ensure you set the `NFT_TOKEN_ID` environment variable
+* **Invalid Token ID**: Verify your NFT token ID exists and is valid
+* **Authentication Failed**: Check that your `PRIVATE_KEY` is correct and matches the NFT owner
 
-The agent will display your NFT Token ID in the startup logs to confirm it's being used correctly. 
+The agent will display your NFT Token ID in the startup logs to confirm it's being used correctly.

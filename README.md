@@ -489,10 +489,8 @@ Teneo-Agent-SDK is open source under the [AGPL-3.0 license](LICENCE).
 
 ## Support
 
-- **Documentation**: [docs.teneo.pro](https://docs.teneo.pro)
-- **Discord**: [Join our community](https://discord.gg/teneo)
+- **Discord**: [Join our community](https://discord.com/invite/teneoprotocol)
 - **Issues**: [GitHub Issues](https://github.com/TeneoProtocolAI/teneo-agent-sdk/issues)
-- **Email**: support@teneo.pro
 
 ---
 

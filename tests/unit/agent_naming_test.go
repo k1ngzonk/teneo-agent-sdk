@@ -3,8 +3,8 @@ package unit
 import (
 	"testing"
 
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/naming"
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/types"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/naming"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/types"
 )
 
 func TestAgentNamingConventions(t *testing.T) {

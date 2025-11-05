@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/types"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/types"
 )
 
 // MockProtocolHandler simulates the real ProtocolHandler for testing

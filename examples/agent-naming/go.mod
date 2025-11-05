@@ -1,7 +1,7 @@
-module github.com/TeneoProtocolAI/teneo-sdk/examples/agent-naming
+module github.com/TeneoProtocolAI/teneo-agent-sdk/examples/agent-naming
 
 go 1.21
 
-require github.com/TeneoProtocolAI/teneo-sdk v0.0.0
+require github.com/TeneoProtocolAI/teneo-agent-sdk v0.0.0
 
-replace github.com/TeneoProtocolAI/teneo-sdk => ../../
+replace github.com/TeneoProtocolAI/teneo-agent-sdk => ../../

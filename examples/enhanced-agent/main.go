@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/agent"
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/types"
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/version"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/agent"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/types"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/version"
 	"github.com/joho/godotenv"
 )
 

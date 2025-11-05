@@ -1,7 +1,7 @@
-module github.com/TeneoProtocolAI/teneo-sdk/tests/unit
+module github.com/TeneoProtocolAI/teneo-agent-sdk/tests/unit
 
 go 1.21
 
-require github.com/TeneoProtocolAI/teneo-sdk v0.0.0
+require github.com/TeneoProtocolAI/teneo-agent-sdk v0.0.0
 
-replace github.com/TeneoProtocolAI/teneo-sdk => ../../
+replace github.com/TeneoProtocolAI/teneo-agent-sdk => ../../

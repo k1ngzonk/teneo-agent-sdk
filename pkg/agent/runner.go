@@ -12,11 +12,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/auth"
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/health"
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/network"
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/nft"
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/types"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/auth"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/health"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/network"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/nft"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/types"
 	"github.com/ethereum/go-ethereum/crypto"
 )
 

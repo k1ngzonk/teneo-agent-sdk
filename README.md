@@ -23,7 +23,7 @@ The SDK provides production-ready networking, authentication with Ethereum walle
 
 ```bash
 # Add to your project (when repository is public)
-go get github.com/TeneoProtocolAI/teneo-sdk
+go get github.com/TeneoProtocolAI/teneo-agent-sdk
 ```
 
 #### Using with Private Repository (VM/Development)
@@ -32,7 +32,7 @@ If you're working with the SDK and the repository is still private, clone the SD
 
 ```bash
 # Clone the SDK to your workspace
-git clone https://github.com/TeneoProtocolAI/teneo-sdk.git
+git clone https://github.com/TeneoProtocolAI/teneo-agent-sdk.git
 cd your-agent-project
 ```
 
@@ -40,11 +40,11 @@ In your `go.mod`, add:
 
 ```go
 require (
-    github.com/TeneoProtocolAI/teneo-sdk v0.1.0  // Use appropriate version
+    github.com/TeneoProtocolAI/teneo-agent-sdk v0.1.0  // Use appropriate version
 )
 
 // Point to local clone
-replace github.com/TeneoProtocolAI/teneo-sdk => ./teneo-agent-sdk
+replace github.com/TeneoProtocolAI/teneo-agent-sdk => ./teneo-agent-sdk
 ```
 
 Then run `go mod tidy` to download dependencies.
@@ -107,7 +107,7 @@ import (
     "strings"
     "time"
 
-    "github.com/TeneoProtocolAI/teneo-sdk/pkg/agent"
+    "github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/agent"
 )
 
 type CommandAgent struct{}
@@ -488,7 +488,7 @@ Teneo-Agent-SDK is open source under the [AGPL-3.0 license](LICENCE).
 
 - **Documentation**: [docs.teneo.pro](https://docs.teneo.pro)
 - **Discord**: [Join our community](https://discord.gg/teneo)
-- **Issues**: [GitHub Issues](https://github.com/TeneoProtocolAI/teneo-sdk/issues)
+- **Issues**: [GitHub Issues](https://github.com/TeneoProtocolAI/teneo-agent-sdk/issues)
 - **Email**: support@teneo.pro
 
 ---

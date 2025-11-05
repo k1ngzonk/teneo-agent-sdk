@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/types"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/types"
 )
 
 // RetryPolicy defines how messages should be retried

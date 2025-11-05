@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/TeneoProtocolAI/teneo-sdk/pkg/types"
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/types"
 )
 
 // ExampleSecurityAgent demonstrates usage of standardized message functions

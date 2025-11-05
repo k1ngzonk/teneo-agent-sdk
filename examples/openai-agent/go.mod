@@ -1,13 +1,13 @@
-module github.com/TeneoProtocolAI/teneo-sdk/examples/openai-agent
+module github.com/TeneoProtocolAI/teneo-agent-sdk/examples/openai-agent
 
 go 1.24.0
 
 toolchain go1.24.9
 
-replace github.com/TeneoProtocolAI/teneo-sdk => ../..
+replace github.com/TeneoProtocolAI/teneo-agent-sdk => ../..
 
 require (
-	github.com/TeneoProtocolAI/teneo-sdk v0.0.0-00010101000000-000000000000
+	github.com/TeneoProtocolAI/teneo-agent-sdk v0.0.0-00010101000000-000000000000
 	github.com/joho/godotenv v1.5.1
 )
 

@@ -64,6 +64,9 @@ PRIVATE_KEY=your_ethereum_private_key_without_0x
 NFT_TOKEN_ID=your_token_id_here
 
 OWNER_ADDRESS=your_wallet_address
+
+# Optional: Rate limiting (tasks per minute, 0 = unlimited)
+RATE_LIMIT_PER_MINUTE=60
 ```
 
 
@@ -255,6 +258,9 @@ config.Room = "weather-agents"  // Join a specific room
 config.MaxConcurrentTasks = 10
 config.TaskTimeout = 60 // seconds
 
+// Rate limiting (0 = unlimited)
+config.RateLimitPerMinute = 60 // Limit to 60 tasks per minute
+
 // Health monitoring
 config.HealthEnabled = true
 config.HealthPort = 8080
@@ -323,6 +329,43 @@ Example response:
   }
 }
 ```
+
+## Rate Limiting
+
+The SDK supports rate limiting to control the number of tasks processed per minute. This helps prevent overload and manage costs for AI-powered agents.
+
+### Configuration
+
+Set via environment variable:
+
+```bash
+# Limit to 60 tasks per minute
+RATE_LIMIT_PER_MINUTE=60
+
+# Unlimited (default)
+RATE_LIMIT_PER_MINUTE=0
+```
+
+Or programmatically:
+
+```go
+config := agent.DefaultConfig()
+config.RateLimitPerMinute = 60 // Limit to 60 tasks per minute
+```
+
+### Behavior
+
+When the rate limit is exceeded:
+- Users receive: "⚠️ Rate limit exceeded. Please try again later."
+- Error code: `rate_limit_exceeded`
+- The task is automatically rejected without processing
+
+### Implementation Details
+
+- Uses a **sliding window** approach tracking requests over the past minute
+- **Thread-safe** with mutex locks for concurrent operations
+- Applies to both incoming tasks and user messages
+- Value of `0` means unlimited (no rate limiting)
 
 ## Advanced Features
 

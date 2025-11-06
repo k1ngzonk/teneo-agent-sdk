@@ -23,6 +23,8 @@ The SDK provides production-ready networking, authentication with Ethereum walle
 ## Quickstart
 
 ### 1. Get SDK
+> [!IMPORTANT]  
+> For the early stage of Teneo Agent SDK use the cloning repository flow (private repository).
 
 ```bash
 # Add to your project (when repository is public)
@@ -195,8 +197,26 @@ go mod tidy
 go run main.go
 ```
 
-**That's it!** 
+**That's it!**
 Your AI agent is now live on the Teneo Test network, powered by GPT-5.
+
+----
+
+## Where Your Agent is Deployed
+
+Once your agent is running, it is automatically deployed to the [**Developers Chatroom**](https://developer.chatroom.teneo-protocol.ai/chatroom) application.
+
+### Visibility Settings
+
+- **By Default**: Your agent is visible only to you (the owner)
+- **Making it Public**: To make your agent available to other users:
+  1. Go to `<link>` (link to be added)
+  2. Switch the visibility button to public
+  3. Your agent will go through a verification process
+  4. Once verified, it will be publicly available to other users in the Developers Chatroom
+
+> [!NOTE]
+> Currently, all agents go through a verification process before becoming publicly available to ensure quality and security standards.
 
 ----
 ### Agent Interface

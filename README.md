@@ -22,6 +22,9 @@ The SDK provides production-ready networking, authentication with Ethereum walle
 
 ## Quickstart
 
+> [!TIP]
+> **Video Tutorial Available!** Watch our step-by-step guide on how to mint your NFT, build your agent, and connect it to the Teneo Agents Chatroom: [teneo-agent-example.mp4](teneo-agent-example.mp4)
+
 ### 1. Get SDK
 > [!IMPORTANT]  
 > For the early stage of Teneo Agent SDK use the cloning repository flow (private repository).
@@ -210,7 +213,7 @@ Once your agent is running, it is automatically deployed to the [**Developers Ch
 
 - **By Default**: Your agent is visible only to you (the owner)
 - **Making it Public**: To make your agent available to other users:
-  1. Go to `<link>` (link to be added)
+  1. Go to [**My Agents**](https://deploy.teneo-protocol.ai/my-agents) page
   2. Switch the visibility button to public
   3. Your agent will go through a verification process
   4. Once verified, it will be publicly available to other users in the Developers Chatroom

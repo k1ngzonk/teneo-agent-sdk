@@ -501,9 +501,8 @@ go run main.go
 ```
 
 ## Vibe Coding
-
-- [Wrapping Your Business Logic](WRAPPING_BUSINESS_LOGIC.md) - Use Claude Code to automatically integrate your code
-- [Running with NFTs](RUNNING_WITH_NFT.md) - NFT integration guide
+- [Wrapping Your Business Logic](docs/WRAPPING_BUSINESS_LOGIC.md) - Use Claude Code to automatically integrate your code
+- [Running with NFTs](docs/RUNNING_WITH_NFT.md) - NFT integration guide
 - [Examples](examples/) - Complete working examples
 
 ## License

@@ -19,7 +19,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Set this to the issue number where you want to track top issues
           # Leave empty to skip updating (will only log)
-          ISSUE_NUMBER: ""
+          ISSUE_NUMBER: "4"
         run: |
           #!/bin/bash
           set -e
@@ -27,8 +27,8 @@ jobs:
           echo "Fetching all open issues for teneo-agent-sdk..."
 
           # Extract owner and repo from GitHub context
-          REPO_OWNER="${{ github.repository_owner }}"
-          REPO_NAME="${{ github.event.repository.name }}"
+          REPO_OWNER="${{ github.REPO_OWNER }}"
+          REPO_NAME="${{ github.REPO_NAME }}"
 
           echo "Repository: $REPO_OWNER/$REPO_NAME"
 

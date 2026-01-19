@@ -1,4 +1,80 @@
-# Teneo Agent SDK
+package main
+
+import (
+	"context"
+	"fmt"
+	"log"
+	"os"
+	"strings"
+
+	"github.com/TeneoProtocolAI/teneo-agent-sdk/pkg/agent"
+	"github.com/joho/godotenv"
+)
+
+type AgentShockAi01Agent struct{}
+
+func (a *AgentShockAi01Agent) ProcessTask(ctx context.Context, task string) (string, error) {
+	log.Printf("Processing task: %s", task)
+
+	// Clean up the task input
+	task = strings.TrimSpace(task)
+	task = strings.TrimPrefix(task, "/")
+	taskLower := strings.ToLower(task)
+
+	// Split into command and arguments
+	parts := strings.Fields(taskLower)
+	if len(parts) == 0 {
+		return "No command provided. Available commands: pencarian", nil
+	}
+
+	command := parts[0]
+	args := parts[1:]
+
+	// Route to appropriate command handler
+	switch command {
+	case "pencarian":
+		// TODO: Implement Mencari informasi
+		return "Command 'pencarian' executed successfully", nil
+
+	default:
+		// NLP Fallback enabled: This input didn't match any commands
+		// TODO: Implement NLP processing for natural language input
+		// Users can send natural language queries like: @agent-shock-ai-01 "what's the weather?"
+		//
+		// Implementation options:
+		// - Integrate with OpenAI API (see OpenAI agent example)
+		// - Use your own ML model
+		// - Call external NLP services
+		// - Implement custom text processing logic
+		//
+		// For now, returning placeholder response:
+		return fmt.Sprintf("NLP processing not yet implemented. Received: %s", task), nil
+	}
+}
+
+func main() {
+	godotenv.Load()
+	config := agent.DefaultConfig()
+
+	config.Name = "SHOCKAI"
+	config.Description = "Makes it easier to produce social media and filter and sort out participating bots."
+	config.Capabilities = []string{"content,otomatisasi,optimization,advertisement,targeting"}
+	config.PrivateKey = os.Getenv("PRIVATE_KEY")
+	config.NFTTokenID = os.Getenv("NFT_TOKEN_ID")
+	config.OwnerAddress = os.Getenv("OWNER_ADDRESS")
+
+	enhancedAgent, err := agent.NewEnhancedAgent(&agent.EnhancedAgentConfig{
+		Config:       config,
+		AgentHandler: &AgentShockAi01Agent{},
+	})
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Println("Starting SHOCKAI...")
+	enhancedAgent.Run()
+}# Teneo Agent SDK
 
 Build autonomous agents for the Teneo Network in Go. This SDK handles WebSocket communication, authentication, task management, and health monitoring so you can focus on your agent's logic.
 
